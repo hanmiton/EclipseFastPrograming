@@ -1,0 +1,21 @@
+Crear el modulo 
+    ctrl + shift + R modulo.xml => Definir nuevo modulo
+    snippet codigo
+        proceso + ctrl + tab
+			<proceso>
+				<idSucursal>1</idSucursal>
+				<idOrganizacion>1</idOrganizacion>
+				<orden>1</orden>
+				<viewId>/paginas/ventas/cargueras/configuraciones/precioRangoCIF.xhtml
+				</viewId>
+				<viewName>Reserva Pedidos Clientes</viewName>
+				<indicadorMostrarMenu>1</indicadorMostrarMenu>
+				<activo>1</activo>
+				<sistema>AS2-ERP</sistema>
+			</proceso>
+Mensaejes declararlos en xhtml
+Vista Copiar Muliclipboard
+    1,2,3,4,5.........
+Añadir todos
+    ctrl + shift + R mensajes => MensajesFrontend
+
