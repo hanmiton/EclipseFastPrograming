@@ -16,6 +16,8 @@ Java
         interfaceImpl + ctrl + espacio
     Bean
         autcompletado + ctrl + espacio (autcompletado producto)  (rebizar)
+    EJBMessages
+        MensajesBackEndEJBMessage + ctrl + espacio (creacion de mensajes backend)
 xhtml
     Vistas
         CODIGOSGRANDES
@@ -23,6 +25,9 @@ xhtml
             texto
                 texto + ctrl + espacio (dentro de lista)  
                 textoPanel + ctrl + espacio (dentro de panel Nuevo)     
+                eventoColumn + ctrl + espacio (escucharEvento)
+            autocompletarProducto
+                autocompletar + ctrl + espacio (completado de productos campo lista)
 Git
     ctrl + shift + { => Abrir Git Syncronized
     ctrl + shift + } => Cerrar Git Syncronized

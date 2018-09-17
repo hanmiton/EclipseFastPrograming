@@ -13,9 +13,31 @@ Crear el modulo
 				<activo>1</activo>
 				<sistema>AS2-ERP</sistema>
 			</proceso>
+
+Cracin de MensajesBackend
+	EjbMensajes
+		MensajesBackend + ctrl + espacio
+	ExcepctionBundle
+		com.asinfo.as2.ventas.cargueras.configuraciones.servicio.impl.ServicioPrecioRangoCIF.ERROR_PERIODO_HASTA_MENOR_DESDE = El valor Hasta {1,,,} es menor que es valor Desde {0,,,} 
+	Declaracion Validacion en servicio
+		void validarPeriodosExcluyentesAjax(BigDecimal desde, BigDecimal hasta) throws AS2Exception;
+	Implementacion de servicio
+		if(desde.compareTo(hasta) <= 0 ) {
+			throw new AS2Exception(EjbMensajes.ERROR_PERIODO_HASTA_MENOR_DESDE, String.valueOf(desde), String.valueOf(hasta));
+		}
+	Llamar metodo desde la vista 
+		eventoColumn + ctrl + espacio 
+	Tomar en bean y llamar al servicio
+		try {
+			servicioPrecioRangoCIF.validarPeriodosExcluyentesAjax(desde, hasta);
+		} catch (AS2Exception e) {
+			JsfUtil.addErrorMessage(e, "");
+			e.printStackTrace();
+		} (revisar y estandarizar proceso)
+	
 Mensaejes declararlos en xhtml
 Vista Copiar Muliclipboard
     1,2,3,4,5.........
 Añadir todos
     ctrl + shift + R mensajes => MensajesFrontend
-
+	ctrl + shift + R EjbMensajes => MensajesBackend
